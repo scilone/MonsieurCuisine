@@ -1,0 +1,1267 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+html, body {
+    height: 100%;
+    min-height: 100%
+}
+
+body.active {
+    overflow-x: hidden;
+    overflow-y: hidden
+}
+
+html, hmtl a {
+    width: 100%;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    background: black;
+    color: #7F8289;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 28px;
+    font-variant: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+a {
+    color: #3A3A3A;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: color 0.1s linear 0s;
+    -moz-transition: color 0.1s linear 0s;
+    -o-transition: color 0.1s linear 0s;
+    transition: color 0.1s linear 0s;
+}
+
+a:hover, a:active, a:focus {
+    outline: 0;
+    color: #e8b12c;
+    text-decoration: none;
+}
+
+a img {
+    border: none;
+}
+
+a > img {
+    vertical-align: bottom;
+}
+
+img {
+    max-width: none;
+}
+
+strong {
+    font-weight: 500;
+}
+
+p {
+    margin: 0 0 30px;
+}
+
+input:focus, textarea:focus, input[type="text"]:focus {
+    outline: 0;
+}
+
+.padding-off {
+    padding: 0;
+}
+
+/* ==================================================
+   Home Page
+================================================== */
+/*---------------Body------------------------*/
+
+.full-container {
+    width: 100%;
+}
+
+.body-content {
+    z-index: 9999;
+    position: relative;
+    margin: auto;
+    height: 100%;
+}
+
+.body-bg {
+    height: auto;
+    left: 0;
+    min-height: 100%;
+    min-width: 1024px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.navbar {
+    position: relative;
+}
+
+@media (min-width: 990px) {
+	.liveTV {
+		padding: 70px;
+	}
+}
+
+@media (max-width: 990px) and (min-width: 768px) {
+	.liveTV {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+    .brand {
+        width: 185px;
+        top: 0px;
+        margin-left: 25% !important;
+    }
+
+    .navbar .container {
+        padding: 7px 0px !important;
+    }
+
+	.liveTV {
+		padding: 20px;
+	}
+}
+
+.navbar {
+    border: none
+}
+
+.navbar .navbar-nav > .current-menu-item a {
+    color: #fff;
+    background-color: #080808
+}
+
+.navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
+    background-color: transparent
+}
+
+.navbar .container {
+    padding: 0px
+}
+
+.navbar .container .navbar-header {
+    margin: 0;
+    position: relative;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.navbar .container > .navbar-collapse {
+    position: fixed;
+    z-index: 50;
+    bottom: 0px;
+    top: 0px;
+    right: -50%;
+    margin: 0;
+    padding: 0px;
+    width: 48%;
+    white-space: nowrap;
+    box-shadow: none;
+    border-top: 0px solid white;
+    display: block;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden
+}
+
+.navbar .container > .navbar-collapse.active {
+    right: 0px
+}
+
+.navbar .container ul {
+    margin: 50px 0 0 0;
+    padding: 0px
+}
+
+.navbar-toggle {
+    border: none;
+    margin-left: 10px
+}
+
+.navbar-toggle .icon-bar {
+    -webkit-transform-origin: 21px;
+    -ms-transform-origin: 21px;
+    transform-origin: 21px;
+    -webkit-transition: -webkit-transform .2s, opacity .1s;
+    transition: transform .2s, opacity .1s;
+    height: 3px;
+    width: 22px
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(4) {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(3) {
+    opacity: 0
+}
+
+.navbar-nav {
+    margin: 0px
+}
+
+@media (min-width: 768px) {
+    .navbar .container {
+        padding: 0 15px
+    }
+
+    .navbar .container .navbar-header {
+        margin: 0px;
+        padding: 0px
+    }
+
+    .navbar .container ul {
+        width: auto;
+        background-color: transparent;
+        padding-left: none;
+        margin: initial
+    }
+
+    .navbar .container > .navbar-collapse {
+        position: initial;
+        z-index: initial;
+        bottom: initial;
+        top: initial;
+        background-color: initial;
+        margin: initial;
+        width: initial;
+        float: right;
+    }
+
+    .navbar-nav {
+        margin: initial
+    }
+
+    .overlay {
+        display: none
+    }
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 5px;
+}
+
+.navbar-toggle .icon-bar {
+    height: 2px;
+}
+
+.navbar-toggle {
+    margin-right: 7px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    padding-bottom: 66px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding-bottom: 51px;
+    }
+}
+
+.b-content {
+    padding: 10px 20px;
+}
+
+.b-content h3 {
+    font-family: arial;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    padding: 10px;
+    border-bottom-left-radius: 15px 35px;
+}
+
+@-webkit-keyframes scaleUp {
+    0% {
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: #fff !important;
+}
+
+::-moz-placeholder {
+    color: #fff !important;
+}
+
+:-ms-input-placeholder {
+    color: #fff !important;
+}
+
+:-moz-placeholder {
+    color: #fff !important;
+}
+
+.navbar-inverse {
+    background: transparent;
+}
+
+.navb-fixid {
+    background: rgb(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.owl-item div a:hover:before {
+    content: '\f002';
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    color: #fff;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    width: 100%;
+    padding: 69% 44%;
+}
+
+
+/*GS------29-05-18------*/
+
+.cbp-spmenu-vertical {
+    width: 230px;
+}
+
+.cbp-spmenu ul li {
+    padding: 10px;
+}
+
+.cbp-spmenu ul li a.active {
+    height: 40px;
+}
+
+
+.cbp-spmenu ul li a {
+    font-size: 15px;
+    color: #FFF;
+    font-weight: medium;
+    padding-left: 5px;
+    height: 23px;
+    text-align: justify;
+}
+
+.cbp-spmenu h3 {
+    font-size: 21px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.nav.navbar-nav.navbar-left.main-icon ul li a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff !important;
+}
+
+.owl-item {
+    border: 1px solid #fff;
+}
+
+.body-bg {
+    background-attachment: fixed;
+}
+
+.cat-toggle {
+    background: transparent;
+}
+
+
+.home-carousel .item-details {
+    background: #fff;
+    color: #000;
+    padding: 10px;
+}
+
+.home-carousel .item-details h4 {
+    font-size: 13px;
+    width: 102px;
+    letter-spacing: .02em;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.home-carousel .item-details {
+    height: 55px;
+}
+
+.owl-controls {
+    right: 0px;
+    top: -67px;
+}
+
+.nav.navbar-nav.navbar-left.main-icon li:hover {
+    background-color: #4c33e2;
+    transition: 0.3s;
+
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #191919 !important;
+}
+
+.main-icon span {
+
+    font-weight: bold;
+
+}
+
+.liveTV {
+    background: url(../img/livetvbackground.png);
+    background-size: auto 118%;
+    background-position-y: -15px;
+}
+
+.liveTV img {
+    height: 80px;
+    -webkit-transition: 0.2s;
+}
+
+.movieVOD img, .tvSeries img {
+    height: 80px;
+    -webkit-transition: 0.2s;
+}
+
+.liveTV, .movieVOD, .tvSeries {
+    border: solid 5px transparent;
+    border-radius: 5px;
+}
+
+.liveTV:hover, .movieVOD:hover, .tvSeries:hover {
+    border-color: #fff;
+}
+
+.liveTV:hover img, .movieVOD:hover img, .tvSeries:hover img {
+    -webkit-transform: scale(1.1);
+    -webkit-transition: 0.2s;
+}
+
+.liveTV:focus, .movieVOD:focus, .tvSeries:focus {
+    border-color: #fff;
+}
+
+.liveTV:focus img, .movieVOD:focus img, .tvSeries:focus img {
+    -webkit-transform: scale(1.1);
+    -webkit-transition: 0.2s;
+}
+
+.homeLink:focus > .rippler {
+    border-color: #fff;
+    -webkit-transform: scale(1.1);
+    -webkit-transition: 0.2s;
+}
+
+.movieVOD {
+    background: url(../img/catch_background_working.png);
+    background-repeat: repeat-y;
+    padding: 30px;
+    background-size: 118% auto;
+    padding: 30px;
+    background-position-x: -15px;
+}
+
+.tvSeries {
+    background: url(../img/Untitled-1.png);
+    background-repeat: repeat-y;
+    padding: 30px;
+    background-size: 118% auto;
+    padding: 30px;
+    background-position-x: -15px;
+}
+
+.Mybtns a.btn {
+    background: #73ad88;
+    color: #fff;
+    width: 100%;
+    padding: 10px 10px;
+    border-color: #73ad88;
+}
+
+.Mybtns a.btn:hover {
+    border-color: #fff;
+}
+
+.account i {
+    border: 1px #fff solid;
+    border-radius: 50%;
+    width: 30px;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 18px !important;
+}
+
+
+.Mybtns a.btn i {
+    margin-top: 3px;
+    -webkit-transition: 0.2s;
+    width: 30px;
+    padding: 5px;
+    font-size: 26px;
+}
+
+.Mybtns {
+    margin-top: 20px;
+}
+
+.home {
+    margin-top: 2em;
+}
+
+@media screen and (max-width: 990px) and (min-width: 767px) {
+    .liveTV img {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .liveTV, .movieVOD, .tvSeries {
+        margin-top: 5px;
+    }
+
+    .liveTV h3, .movieVOD h3, .tvSeries h3 {
+        font-size: 25px;
+    }
+
+    .Mybtns a.btn {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .liveTV, .movieVOD, .tvSeries {
+        margin-top: 5px;
+    }
+
+    .Mybtns a.btn {
+        margin-top: 10px;
+    }
+
+    .container-fluid {
+        margin-bottom: 30px;
+    }
+}
+
+.datetime {
+    float: right;
+    position: relative;
+    top: 18px;
+}
+
+.time {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.channel-list ul li.playingChanel {
+    background: #4c33e2;
+}
+
+.video-player1 {
+    float: left;
+    width: 100%;
+    background: #0000003d;
+    padding: 20px;
+    margin-top: 75px;
+    border-radius: 10px;
+}
+
+.epgloader, .chanelLoader {
+    position: relative;
+    width: 50%;
+    left: 25%;
+}
+
+.chanelLoader img, .epgloader img {
+    width: 100px;
+}
+
+.NowPlayingActive, .NowPlayingActive:hover {
+    color: #fff;
+    background-color: #ea7c1b;
+}
+
+.hideOnLoad {
+    display: none !important;
+}
+
+.tab-pane {
+
+    overflow-y: auto;
+    -webkit-transition: 0.2s;
+}
+
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+
+}
+
+::-webkit-scrollbar-button {
+    width: 25px;
+    height: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #041484;
+    border: 0px dotted #ffffff;
+    border-radius: 53px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #06069f;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #0b1164;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #fff;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+
+.panel-heading {
+    padding: 0px;
+}
+
+.nav-tabs {
+    background: transparent;
+}
+
+.panel-primary, .panel-primary > .panel-heading, .panel-primary {
+    background: transparent;
+    border-color: transparent;
+}
+
+
+.with-nav-tabs.panel-primary .nav-tabs > li > a,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #fff;
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > .open > a,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: # #575757;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: rgba(19, 6, 58, 0.88);
+    border-color: #fff;
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #fff;
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: transparent;
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    background-color: transparent;
+}
+
+.tabsEPG {
+    background: rgba(19, 6, 58, 0.78);
+    padding: 5px;
+    border-radius: 5px;
+    min-height: 320px;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+
+.tabsEPG h3 {
+    margin-top: 0px;
+    color: #fff;
+    text-align: center;
+}
+
+.hd_support_tv {
+    width: 100%;
+}
+
+.panel-body {
+    padding: 15px;
+    height: 215px;
+}
+
+.customTab {
+    height: 300px;
+}
+
+
+.epginfo {
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.i-cast p {
+    height: 35px;
+    overflow: hidden;
+    margin: 0px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.openCast p {
+    height: auto !important;
+}
+
+/*.jw-video
+{
+	border: solid 2px #fff !important;
+}*/
+
+.backToInfo {
+    border-color: #fff;
+    border-radius: 0px;
+    background: transparent;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#fullLoader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    top: 0px;
+    /*display: none;*/
+}
+
+.chanelLoader, .epgloader {
+}
+
+#fullLoader img, .chanelLoader img, .PlayerLoader img, .epgloader img {
+    width: 100px;
+    position: relative;
+    margin-top: 5%;
+}
+
+#fullLoader p, .chanelLoader p, .epgloader p, .PlayerLoader p {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/*---------------------------------Player CSS Starts---------------------------------------------------*/
+
+.custom-seekbar, #custom-seekbar {
+    cursor: pointer;
+    height: 10px;
+    outline: thin solid orange;
+    overflow: hidden;
+    position: absolute;
+    width: 80%;
+    margin-top: 23px;
+    float: left;
+    left: 10%;
+}
+
+#custom-seekbar span, .custom-seekbar span {
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 0px;
+}
+
+.AJPlayerHolder {
+    width: 100%;
+    height: auto;
+    float: left;
+    border: solid 2px #fff;
+    position: relative;
+}
+
+.AJPlayerHolder video {
+    width: 100%;
+    float: left;
+    background: #000 url(../images/loader.gif) no-repeat center;
+    background-size: 10%;
+    object-fit: contain;
+}
+
+.AJplayer:hover .AJControls {
+    opacity: 1;
+}
+
+.AJControls {
+    float: left;
+    position: absolute;
+
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 50px;
+    width: 100%;
+    opacity: 1;
+    left: 0px;
+    bottom: 0px;
+}
+
+.AJControls .play, .AJControls .pause, .AJControls .stop {
+    float: left;
+    width: 10%;
+    height: 65%;
+    bottom: 0px;
+    display: none;
+}
+
+.AJControls .pause {
+    display: block;
+}
+
+.fullscreen, .collapse {
+    display: block;
+    right: 22px;
+    top: 19px;
+    position: absolute;
+}
+
+.collapse {
+    display: none;
+    right: 22px;
+    top: 19px;
+}
+
+.buttons {
+    width: 10%;
+    min-width: 30px;
+    float: left;
+    height: 50px;
+    text-align: center;
+    display: none;
+}
+
+.buttons p {
+    bottom: -4px;
+    margin: 0px;
+    position: absolute
+
+}
+
+.runTime {
+    position: absolute;
+    top: -2px;
+    left: 10%;
+}
+
+.totalTime {
+    position: absolute;
+    top: -2px;
+    right: 10%;
+}
+
+/*---------------------------------Player CSS Ends-------------------------------------------------*/
+
+.clearSearch {
+    float: right;
+    color: #91acda;
+    font-size: 12px;
+    font-weight: 400;
+    border: solid 1px #91acda;
+    line-height: 18px;
+    padding: 5px 10px;
+}
+
+.clearSearch:hover {
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+p.SerchResult {
+    margin-top: 10px;
+    padding: 10px 30px;
+}
+
+span#searchOf {
+    color: #76b0f5;
+    text-decoration: underline;
+}
+
+h1#NoResultFound {
+    text-align: center;
+}
+
+.descHeading, .decription {
+    color: #fff;
+}
+
+.heading {
+    color: #fff;
+}
+
+.container-holder {
+    margin-top: 40px;
+    float: left;
+}
+
+.container-holder .container {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+select.form-control option {
+    color: #000;
+}
+
+table tr td {
+    vertical-align: middle;
+}
+
+.WihthoutZoom {
+    padding: 10px 26px;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 99999;
+    top: 0px;
+    text-align: center;
+    word-wrap: break-word;
+    width: 90%;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+.PlayerLoader {
+    color: #fff;
+    width: 100%;
+    height: 369px;
+    background: #000;
+    border: 2px solid;
+}
+
+.Loadicon {
+    width: 100px;
+    height: 100px;
+}
+
+.PlayerLoader .Loadicon {
+    -webkit-transform: scale(0.9);
+    -webkit-animation: linear 2s infinite rotate;
+    position: absolute;
+    top: 47%;
+    left: 42%;
+}
+
+#PloaderIcon {
+    fill: white;
+
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+.player_changeIssue {
+    position: fixed;
+    z-index: 99999;
+    top: -300px;
+    left: 35%;
+}
+
+.flowplayer {
+    background: #ccc !important;
+    border: solid 2px #fff;
+}
+
+.navbar-right a i {
+    float: left;
+    margin-right: 10px;
+}
+
+.navbar-right a .r-show {
+    float: left;
+}
+
+.r-li:hover {
+    transition: 0.3s;
+    /*border-bottom: solid 2px #4c33e2 !important*/;
+}
+
+.r-li {
+    transition: 0.3s;
+    /*border-bottom: solid 0px #4c33e2 !important;*/
+}
+
+.r-li:hover .fa-search {
+    transition: 0.3s;
+    /*color: #4c33e2;*/
+    -webkit-transform: scale(1.2);
+}
+
+.r-li:hover .fa-gear {
+    transition: 0.3s;
+    /*color: #4c33e2;*/
+    -webkit-transform: scale(1.2);
+}
+
+.r-li:hover .fa-sign-out {
+    transition: 0.3s;
+    /*color: #4c33e2;*/
+    -webkit-transform: scale(1.2);
+}
+
+button.LoadMoreBtn {
+    position: absolute;
+    border: 0px;
+    bottom: -30px;
+    background-color: transparent;
+    border: 1px solid;
+}
+
+button.LoadMoreBtn:hover {
+    transition: 0.3s;
+    webkit-transform: scale(1.5);
+}
+
+.hideOnload {
+    display: none !important;
+}
+
+.MainContainerCatchUp {
+    padding: 20px;
+    text-align: center;
+}
+
+.catchchannesList {
+    background-color: gray;
+    color: #fff;
+    margin: 10px;
+}
+
+#SeriesContainer, #MoviesContainer {
+    margin-bottom: 50px !important;
+}
+
+.loading-loadBtn {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.InfoLoading:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.7) url('../images/roundloader2.gif') no-repeat center center;
+    background-size: 25%;
+    z-index: 9999;
+}
+
+.imageUploader {
+    background: rgba(255, 255, 255, 0.5);
+    position: relative;
+    float: left;
+    width: 180px;
+    height: 57px;
+}
+
+#logoView {
+    width: auto;
+    height: 57px;
+    z-index: 2;
+    position: relative;
+    float: left;
+    margin-left: 10px;
+}
+
+.imageUploader p {
+    text-align: center;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    top: 15px;
+}
+
+.uploadImage {
+    position: absolute;
+    width: 165px;
+    height: 60px;
+    top: 0px;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form-control[disabled], .form-control[readonly] {
+    background: rgba(255, 255, 255, 0.5);
+    color: #000 !important;
+}
+
+.info_set span {
+    font-weight: 500;
+}
+
+#overlay {
+    height: 100%;
+    background: black;
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    opacity: 0.8;
+    display: none;
+}
+
+.star.star-empty:after, .star.star-0:after {
+    width: 0px;
+}
+.star {
+    font-size: 14px;
+    width: 14px;
+    display: inline-block;
+    color: gray;
+}
+.star:after {
+    content:'\2605';
+    color: gold;
+    position: absolute;
+    margin-left: -12px;
+    overflow: hidden;
+}
+.star:last-child {
+    margin-right: 0;
+}
+.star:before {
+    content:'\2605';
+}
+
+a.btn {
+    -webkit-appearance: initial;
+    background: lightgray;
+    font-weight: bold;
+}
+a.btn:focus, a.btn:hover {
+    outline: none;
+    color: #e8b12c !important;
+}
+a.btn-danger {
+    background-color: #d9534f;
+}
+a.btn-default {
+    background-color: #fff;
+}
+a.btn-primary {
+    background-color: #337ab7;
+}
+a.btn-warning {
+    background-color: #f0ad4e;
+}
+a.btn-success {
+    background-color: #5cb85c;
+}
+a.btn-info {
+    background-color: #5bc0de;
+}
+a.btn-danger:focus, a.btn-primary:focus, a.btn-warning:focus, a.btn-success:focus, a.btn-info:focus{
+    color: white !important;
+}
+a.btn-danger:hover, a.btn-primary:hover, a.btn-warning:hover, a.btn-success:hover, a.btn-info:hover{
+    color: white !important;
+}
+a.btn-default:focus, a.btn-default:hover {
+    color: black !important;
+}
+
+.form-control:focus {
+    border-width: medium;
+    border-color: rgba(232,177,44, .8);
+}

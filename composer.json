@@ -1,0 +1,29 @@
+{
+    "type": "project",
+    "license": "proprietary",
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+  "require": {
+      "ext-curl": "*",
+      "ext-json": "*",
+      "twig/twig": "^2.11",
+      "ext-sodium": "*",
+      "ext-mysqli": "*",
+      "ext-libxml": "*",
+      "ext-dom": "*"
+  }
+}

@@ -1,0 +1,27 @@
+<style>img:not([src]) {
+            visibility: hidden;
+        }
+
+        /* Fixes Firefox anomaly during image load */
+        @-moz-document url-prefix() {
+            img:-moz-loading {
+                visibility: hidden;
+            }
+        }
+    img:not([src]) {
+        visibility: hidden;
+    }
+
+    /* Fixes Firefox anomaly during image load */
+    @-moz-document url-prefix() {
+        img:-moz-loading {
+            visibility: hidden;
+        }
+    }
+</style>
+<script type="text/javascript">
+    window.lazyLoadOptions = {
+        threshold: 0
+    };
+</script>
+<script async src="{{ baseUrlAbsolute }}/js/lazyload.min.js"></script>

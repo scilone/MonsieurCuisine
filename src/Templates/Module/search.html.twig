@@ -1,0 +1,91 @@
+<div class="container modal-custom" id="searchPopin">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="input-group">
+                <input id="inputSearch" type="text" class="form-control" placeholder="Search" value="{{ search }}" autocomplete="on">
+                <span id="goSearch" class="input-group-addon"><i class="fa fa-search"></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #searchPopin {
+        width: 100%;
+        position: fixed;
+        z-index: 12;
+        margin-top: 1em;
+        display: none;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        {% if searchJs is defined %}
+        $('#inputSearch').on('input', function() {
+            search();
+        });
+        {% endif %}
+
+        $('#search').click(function () {
+            $('#overlay').show();
+            $('#searchPopin').show();
+            $('#inputSearch')[0].setSelectionRange(100,100);
+            $('#inputSearch').focus();
+
+
+            /*window.history.pushState('forward', null, '#search');
+            $(window).on('popstate', function() {
+                $('#overlay').hide();
+                $('#searchPopin').hide();
+                removeHash();
+            });*/
+
+        });
+
+        function removeHash () {
+            /*var scrollV, scrollH, loc = window.location;
+            if ("pushState" in history)
+                history.pushState("", document.title, loc.pathname + loc.search);
+            else {
+                // Prevent scrolling by storing the page's current scroll offset
+                scrollV = document.body.scrollTop;
+                scrollH = document.body.scrollLeft;
+
+                loc.hash = "";
+
+                // Restore the scroll offset, should be flicker free
+                document.body.scrollTop = scrollV;
+                document.body.scrollLeft = scrollH;
+            }*/
+            //history.back();
+        }
+
+        $("#inputSearch").on('keyup', function (e) {
+            if (e.keyCode === 13) {
+                search();
+            }
+        });
+
+        $('#goSearch').click(function() {
+            search();
+        });
+
+        function search() {
+            {% if searchJs is defined %}
+            const search = $('#inputSearch').val().toLowerCase();
+            $('.item-link').each(function () {
+                if ($(this).data('name').search(search) >= 0) {
+                    $(this).removeClass('hide');
+                } else {
+                    $(this).addClass('hide');
+                }
+            })
+            {% else %}
+            removeHash();
+            location.href = '{{ baseUrlAbsolute }}/streams/{{ type }}/all/0/' + $("#inputSearch").val();
+            {% endif %}
+        }
+    });
+
+</script>

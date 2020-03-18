@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {% block head %}
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <title>{% block title %}{% endblock %}</title>
+
+            {% block extraBCss %}{% endblock %}
+            {% block extraBJs %}{% endblock %}
+
+            {% block css %}
+            <link href="{{ baseUrlAbsolute }}/css/bootstrap.css" rel="stylesheet">
+            <link href="{{ baseUrlAbsolute }}/css/style.css?201909171705" rel="stylesheet">
+            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                  rel="stylesheet"
+                  crossorigin="anonymous">
+            {% endblock %}
+
+            {% block extraACss %}{% endblock %}
+            {% block extraAJs %}{% endblock %}
+    {% endblock %}
+    </head>
+    <body>
+        <style>
+            {% if isTv %}
+            a.btn-danger, a.btn-default, a.btn-primary, a.btn-warning, a.btn-success, a.btn-info {
+                color: #333;
+                background-color: #fff;
+                border-color: #ccc;
+            }
+
+            .form-control:focus {
+                border-width: 3px;
+                border-color: rgba(232,177,44, .8);
+            }
+            {% endif %}
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            crossorigin="anonymous"></script>
+
+        <div id="overlay"></div>
+        {% block body %}
+
+        {% endblock %}
+
+        {% block bg %}
+
+        {% endblock %}
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"s
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function sortAlphabetically(list, dataName, direction) {
+                list.sort(
+                    function(a, b){
+                        return direction === 0
+                            ? ($(a).data(dataName) < $(b).data(dataName) ? -1 : 1)
+                            : ($(a).data(dataName) > $(b).data(dataName) ? -1 : 1);
+                    }
+                );
+
+                return list;
+            }
+            function sortNumerically (list, dataName, direction) {
+                list.sort(
+                    function(a, b){
+                        return direction === 0
+                            ? $(a).data(dataName) - $(b).data(dataName)
+                            : $(b).data(dataName) - $(a).data(dataName);
+                    }
+                );
+
+                return list;
+            }
+
+            $('#overlay').click(function () {
+                $(this).hide();
+                $('.modal-custom').hide();
+            });
+        </script>
+    {% block js %}
+
+    {% endblock %}
+    </body>
+</html>

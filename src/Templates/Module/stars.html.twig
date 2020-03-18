@@ -1,0 +1,26 @@
+{% set ratingDecimal = (rating - rating|round(0, 'floor')) * 10  %}
+<div class="stars">
+    {% if rating < 1 %}
+        <span class="star star-{{ ratingDecimal }}"></span>
+        <span class="star star-empty"></span><span class="star star-empty"></span><span class="star star-empty"></span><span class="star star-empty"></span>
+    {% elseif rating < 2 %}
+        <span class="star"></span>
+        <span class="star star-{{ ratingDecimal }}"></span>
+        <span class="star star-empty"></span><span class="star star-empty"></span><span class="star star-empty"></span>
+    {% elseif rating < 3 %}
+        <span class="star"></span><span class="star"></span>
+        <span class="star star-{{ ratingDecimal }}"></span>
+        <span class="star star-empty"></span><span class="star star-empty"></span>
+    {% elseif rating < 4 %}
+        <span class="star"></span><span class="star"></span><span class="star"></span>
+        <span class="star star-{{ ratingDecimal }}"></span>
+        <span class="star star-empty"></span>
+    {% else %}
+        <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+        {% if rating == 5 %}
+            <span class="star"></span>
+        {% else %}
+            <span class="star star-{{ ratingDecimal }}"></span>
+        {% endif %}
+    {% endif %}
+</div>
